@@ -67,7 +67,7 @@ pipeline = pickle.load(open('pipeline/pipeline.pkl','rb'))
 outliers_limites = pd.read_csv('pipeline/outliers_limites.csv')
     
 @app.post('/predicao_americanas')
-def diabetes_pred(input_parameters : model_input):
+def predicao_americanas(input_parameters : model_input):
     
     
     # recebe dados, verifica, aplica o pipeline e faz previsão
