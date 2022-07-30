@@ -76,10 +76,9 @@ def diabetes_pred(input_parameters : model_input):
     
     input_dictionary = json.loads(input_data)
     
-    
     ############ início do pipeline
     
-    dataframe = pd.DataFrame(input_dictionary)
+    dataframe = pd.DataFrame([input_dictionary])
     
     dataframe = ceifar(dataframe,outliers_limites)
     
