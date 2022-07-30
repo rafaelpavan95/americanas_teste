@@ -87,7 +87,7 @@ def predicao_americanas(input_parameters : model_input):
     
     dataframe = dataframe.drop(['feature4'],axis=1)
     
-    output_dict = dataframe.to_dict()
+    output_dict = dataframe.to_dict('r')
     
     lista = [output_dict[key] for key in output_dict.keys()]
     
