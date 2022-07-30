@@ -1,0 +1,8 @@
+fastapi==1.2.3
+uvicorn
+pydantic
+pickle5
+numpy
+pandas
+scikit-learn
+
