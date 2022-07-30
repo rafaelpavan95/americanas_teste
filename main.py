@@ -28,23 +28,22 @@ app.add_middleware(
 class model_input(BaseModel):
 
     feature0:float
-    feature1:float
+    feature1:int
     feature2:float
     feature3:float
     feature4:float
     feature5:float
-    feature6:float
+    feature6:int
     feature7:float
     feature8:float
-    feature9:float
+    feature9:int
     feature10:float
     feature11:float
     feature12:float
     feature13:float
     feature14:float
-    feature15:float 
+    feature15:int 
 
-        
         
 def ceifar(dados, limites):
     
@@ -76,42 +75,35 @@ def predicao_americanas(input_parameters : model_input):
     
     input_data = input_parameters.dict()
     
-    print(input_data)
+    feature0 = input_data['feature0'] 
+    feature1 = input_data['feature1']
+    feature2 = input_data['feature2']
+    feature3 = input_data['feature3']
+    feature4 = input_data['feature4']
+    feature5 = input_data['feature5']
+    feature6  = input_data['feature6']
+    feature7 = input_data['feature7']
+    feature8 = input_data['feature8']
+    feature9 = input_data['feature9']
+    feature10 = input_data['feature10']
+    feature11 = input_data['feature11']
+    feature12 = input_data['feature12']
+    feature13 = input_data['feature13']
+    feature14 = input_data['feature14']
+    feature15 = input_data['feature15']
     
     ############ início do pipeline
     
     dataframe = pd.DataFrame([input_data])
     
-    print(dataframe)
     
     dataframe = ceifar(dataframe,outliers_limites)
     
     dataframe.iloc[:,:] = pipeline.transform(dataframe.iloc[:,:])
 
     dataframe = dataframe.drop(['feature4'],axis=1)
-
-    output_dict = dataframe.to_dict('records')[0]
     
-    print(output_dict)
-
-    feature0 = output_dict['feature0'] 
-    feature1 = output_dict['feature1']
-    feature2 = output_dict['feature2']
-    feature3 = output_dict['feature3']
-    feature5 = output_dict['feature5']
-    feature6  = output_dict['feature6']
-    feature7 = output_dict['feature7']
-    feature8 = output_dict['feature8']
-    feature9 = output_dict['feature9']
-    feature10 = output_dict['feature10']
-    feature11 = output_dict['feature11']
-    feature12 = output_dict['feature12']
-    feature13 = output_dict['feature13']
-    feature14 = output_dict['feature14']
-    feature15 = output_dict['feature15']
-    
-    print(feature0,feature1,feature2,feature3,feature5,feature6,feature7,feature8,feature9,feature10,feature11,feature12,feature13,feature14,feature15)
-
+    dados = dataframe.values
 
     ########## fim do pipeline
     
