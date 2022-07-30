@@ -119,5 +119,5 @@ def predicao_americanas(input_parameters : model_input):
     
     print(prediction)
     
-    return {'previsto': prediction}
+    return {'previsto': list(prediction)}
 
