@@ -92,12 +92,10 @@ def predicao_americanas(input_parameters : model_input):
     lista = [output_dict[key] for key in output_dict.keys()]
     
     lista = np.array(lista).reshape(1,-1)
-    
-    return lista
-    
+
     ########## fim do pipeline
     
-#     prediction = rf_model.predict(lista)
+    prediction = rf_model.predict(lista)
     
-#     return prediction[0]
+    return prediction[0]
 
