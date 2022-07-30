@@ -84,22 +84,21 @@ def predicao_americanas(input_parameters : model_input):
     dataframe = ceifar(dataframe,outliers_limites)
     
     dataframe.iloc[:,:] = pipeline.transform(dataframe.iloc[:,:])
-    
+    print('0')
     dataframe = dataframe.drop(['feature4'],axis=1)
-    
+    print('1')
     output_dict = dataframe.to_dict('records')[0]
-    
+    print('2')
     lista = [output_dict[key] for key in output_dict.keys()]
-    
+    print('3')
     lista = np.array(lista).reshape(1,-1)
-    
+    print('4')
     ########## fim do pipeline
     
     prediction = rf_model.predict(lista)
-    
-    print(prediction)
+    print('5')
     
     output = {'predicao': prediction}
-    
+    print('6')
     return {'previsto': prediction}
 
