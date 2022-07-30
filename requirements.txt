@@ -1,4 +1,4 @@
-fastapi==0.79.0
+fastapi
 uvicorn
 pydantic
 pickle5
