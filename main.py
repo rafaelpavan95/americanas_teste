@@ -109,8 +109,7 @@ def predicao_americanas(input_parameters : model_input):
 
     ########## fim do pipeline
     
-    prediction = rf_model.predict(np.array([[feature0,feature1,feature2,feature3,feature4,feature5,feature6,feature7,feature8,feature9,feature10,feature11,feature12,feature13,feature14,feature15]])
+    prediction = rf_model.predict(np.array([[feature0,feature1,feature2,feature3,feature4,feature5,feature6,feature7,feature8,feature9,feature10,feature11,feature12,feature13,feature14,feature15]]))
 
-    
     return {'previsto': prediction}
 
