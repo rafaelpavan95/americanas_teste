@@ -94,7 +94,9 @@ def predicao_americanas(input_parameters : model_input):
     lista = [output_dict[key] for key in output_dict.keys()]
     
     lista = np.array(lista).reshape(1,-1)
-
+    
+    print(lista)
+    
     ########## fim do pipeline
     
     prediction = rf_model.predict(lista)
