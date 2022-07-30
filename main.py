@@ -28,21 +28,21 @@ app.add_middleware(
 class model_input(BaseModel):
 
     feature0:float
-    feature1:int  
+    feature1:float
     feature2:float
     feature3:float
     feature4:float
     feature5:float
-    feature6:int  
+    feature6:float
     feature7:float
     feature8:float
-    feature9:int  
+    feature9:float
     feature10:float
     feature11:float
     feature12:float
     feature13:float
     feature14:float
-    feature15:int  
+    feature15:float 
 
         
         
