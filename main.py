@@ -98,7 +98,7 @@ def predicao_americanas(input_parameters : model_input):
     
     ########## fim do pipeline
     
-    prediction = rf_model.predict(lista)
+#     prediction = rf_model.predict(lista)
     
 #     return prediction[0]
 
