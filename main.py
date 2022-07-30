@@ -67,19 +67,22 @@ rf_model = pickle.load(open('modelos/rf.pkl','rb'))
 pipeline = pickle.load(open('pipeline/pipeline.pkl','rb'))
 
 outliers_limites = pd.read_csv('pipeline/outliers_limites.csv')
+
     
 @app.post('/predicao_americanas')
 def predicao_americanas(input_parameters : model_input):
    
     # recebe dados, verifica, aplica o pipeline e faz previsão
     
-    input_data = input_parameters.json()
+    input_data = input_parameters.dict()
     
-    input_dictionary = json.loads(input_data)
+    print(input_data)
     
     ############ início do pipeline
     
-    dataframe = pd.DataFrame([input_dictionary])
+    dataframe = pd.DataFrame([input_data])
+    
+    print(dataframe)
     
     dataframe = ceifar(dataframe,outliers_limites)
     
