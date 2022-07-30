@@ -97,5 +97,5 @@ def predicao_americanas(input_parameters : model_input):
     
     prediction = rf_model.predict(lista)
     
-    return prediction
+    return {'previsto': prediction}
 
