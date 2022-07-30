@@ -84,21 +84,33 @@ def predicao_americanas(input_parameters : model_input):
     dataframe = ceifar(dataframe,outliers_limites)
     
     dataframe.iloc[:,:] = pipeline.transform(dataframe.iloc[:,:])
-    print('0')
+
     dataframe = dataframe.drop(['feature4'],axis=1)
-    print('1')
+
     output_dict = dataframe.to_dict('records')[0]
-    print('2')
-    lista = [output_dict[key] for key in output_dict.keys()]
-    print('3')
-    lista = np.array(lista).reshape(1,-1)
-    print('4')
+
+    feature0 = output_dict['feature0'] 
+    feature1 = output_dict['feature1']
+    feature2 = output_dict['feature2']
+    feature3 = output_dict['feature3']
+    feature4 = output_dict['feature4']
+    feature5 = output_dict['feature5']
+    feature6  = output_dict['feature6']
+    feature7 = output_dict['feature7']
+    feature8 = output_dict['feature8']
+    feature9 = output_dict['feature9']
+    feature10 = output_dict['feature10']
+    feature11 = output_dict['feature11']
+    feature12 = output_dict['feature12']
+    feature13 = output_dict['feature13']
+    feature14 = output_dict['feature14']
+    feature15 = output_dict['feature15']
+    
+
     ########## fim do pipeline
     
-    prediction = rf_model.predict(lista)
-    print('5')
+    prediction = rf_model.predict(np.array([[feature0,feature1,feature2,feature3,feature4,feature5,feature6,feature7,feature8,feature9,feature10,feature11,feature12,feature13,feature14,feature15]])
+
     
-    output = {'predicao': prediction}
-    print('6')
     return {'previsto': prediction}
 
