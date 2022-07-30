@@ -94,9 +94,11 @@ def predicao_americanas(input_parameters : model_input):
     
     lista = np.array(lista).reshape(1,-1)
     
+    return 1
+    
     ########## fim do pipeline
     
     prediction = rf_model.predict(lista)
     
-    return prediction[0]
+#     return prediction[0]
 
