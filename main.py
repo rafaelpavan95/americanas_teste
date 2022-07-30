@@ -89,6 +89,8 @@ def predicao_americanas(input_parameters : model_input):
     
     output_dict = dataframe.to_dict('records')[0]
     
+    print(output_dict)
+    
     lista = [output_dict[key] for key in output_dict.keys()]
     
     lista = np.array(lista).reshape(1,-1)
