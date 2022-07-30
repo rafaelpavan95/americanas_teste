@@ -70,8 +70,7 @@ outliers_limites = pd.read_csv('pipeline/outliers_limites.csv')
     
 @app.post('/predicao_americanas')
 def predicao_americanas(input_parameters : model_input):
-    
-    
+   
     # recebe dados, verifica, aplica o pipeline e faz previsão
     
     input_data = input_parameters.json()
@@ -94,7 +93,7 @@ def predicao_americanas(input_parameters : model_input):
     
     lista = np.array(lista).reshape(1,-1)
     
-    return 1
+    return lista
     
     ########## fim do pipeline
     
