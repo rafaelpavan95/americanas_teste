@@ -93,7 +93,6 @@ def predicao_americanas(input_parameters : model_input):
     feature1 = output_dict['feature1']
     feature2 = output_dict['feature2']
     feature3 = output_dict['feature3']
-    feature4 = output_dict['feature4']
     feature5 = output_dict['feature5']
     feature6  = output_dict['feature6']
     feature7 = output_dict['feature7']
@@ -109,7 +108,7 @@ def predicao_americanas(input_parameters : model_input):
 
     ########## fim do pipeline
     
-    prediction = rf_model.predict(np.array([[feature0,feature1,feature2,feature3,feature4,feature5,feature6,feature7,feature8,feature9,feature10,feature11,feature12,feature13,feature14,feature15]]))
+    prediction = rf_model.predict(np.array([[feature0,feature1,feature2,feature3,feature5,feature6,feature7,feature8,feature9,feature10,feature11,feature12,feature13,feature14,feature15]]))
 
     return {'previsto': prediction}
 
