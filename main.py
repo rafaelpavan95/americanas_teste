@@ -45,16 +45,18 @@ class model_input(BaseModel):
     feature15:int  
 
         
+        
 def ceifar(dados, limites):
     
     dados_out = dados.copy()
     
     for col_name in dados:
         
-        dados_out[col_name][dados_out[col_name]<limites[col_name][0]] = limites[col_name][0]
-
-        dados_out[col_name][dados_out[col_name]>limites[col_name][1]] = limites[col_name][1]
         
+        dados_out.loc[dados_out[dados_out[col_name]<limites[col_name][0]].index, [col_name]] = [limites[col_name][0]]
+        dados_out.loc[dados_out[dados_out[col_name]>limites[col_name][1]].index, [col_name]] = [limites[col_name][1]]
+        
+
     return dados_out
 
 
