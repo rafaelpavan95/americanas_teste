@@ -49,7 +49,7 @@ Exemplo:
  
  Conforme solicitado no case, o projeto foi dividido em 4 etapas: Análise, Preparação, Modelagem e Entrega do Modelo.
  
- Uma apresentação de slides resumindo as tarefas/análises realizadas pode ser acessada neste link.
+ [Uma apresentação de slides resumindo as tarefas/análises realizadas pode ser acessada neste link.](https://docs.google.com/presentation/d/11GV9u_vggW3WUcopnulmxoTScxAk1-5PaAoxIy4aJ8M/edit?usp=sharing)
  
  
  # [Análise Exploratória dos Dados](https://github.com/rafaelpavan95/americanas_teste/blob/master/analise_exploratoria.ipynb)
