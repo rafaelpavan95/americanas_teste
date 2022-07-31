@@ -45,18 +45,28 @@ Exemplo:
 
  ______________
  
- # [Análise Exploratória dos Dados]()
+ # Conteúdo
+ 
+ Conforme solicitado no case, o projeto foi dividido em 4 etapas: Análise, Preparação, Modelagem e Entrega do Modelo.
+ 
+ Uma apresentação de slides resumindo as tarefas/análises realizadas pode ser acessada neste link.
  
  
- # [Preparação dos Dados]()
+ # [Análise Exploratória dos Dados](https://github.com/rafaelpavan95/americanas_teste/blob/master/analise_exploratoria.ipynb)
  
+ - Realizada análise estatística descritiva e visual dos dados. Tratamento de outliers e assimetria das distribuições das features. Análise da correlação. Visualização da informação através de boxplots, histogramas, gráficos de dispersão, etc. 
  
- # [Modelagem]()
+ # [Preparação dos Dados](https://github.com/rafaelpavan95/americanas_teste/blob/master/preparacao.ipynb)
  
+ - Aqui foi criado o pipeline para o projeto, separando os dados em treino e teste e aplicando as transformações necessárias. Clamp de outliers / Yeo-Johnson / MinMaxScalers  
+
+ # [Modelagem](https://github.com/rafaelpavan95/americanas_teste/blob/master/modelagem.ipynb)
+ 
+ - Testado os modelos: Random Forest, KNN, Logistic Regression, Support Vector Machines, XGBoost. Métricas: acurácia, precisão macro, revocação macro, f1 macro e AUC.
  
  # [Entrega do Modelo](https://github.com/rafaelpavan95/americanas_teste/blob/master/entrega_do_modelo.ipynb)
  
- - O modelo pode ser consumido tanto localmente, quanto remotamente (via Rest API).
+ - O modelo pode ser consumido tanto localmente, quanto remotamente (via Rest API). A [API](https://github.com/rafaelpavan95/americanas_teste/blob/master/main.py) foi desenvolvida com fastAPI.
  - O deploy foi feito em: https://rafaelpavan-americanas.herokuapp.com/predicao_americanas
  - Exemplo de uso para uma amostra genérica:
 
