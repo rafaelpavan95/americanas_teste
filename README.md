@@ -119,3 +119,30 @@ print(response.json())
 ```
 
 
+Para executar do terminal ou cmd:
+
+```
+curl --location --request POST 'https://rafaelpavan-americanas.herokuapp.com/predicao_americanas' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "feature0": 1300.0,
+    "feature1": 26,
+    "feature2": 2757.6500000000005,
+    "feature3": 0.8800000000003338,
+    "feature4": -1318.95,
+    "feature5": 0.7848457350272233,
+    "feature6": 1653,
+    "feature7": 0.0067075150137964,
+    "feature8": 2.1256021890777355,
+    "feature9": 246440,
+    "feature10": 42129.62000000001,
+    "feature11": 0.0654563226537528,
+    "feature12": 51.894000000000005,
+    "feature13": 0.0151240169388989,
+    "feature14": 110.30600000000004,
+    "feature15": 25
+}'
+
+```
+
+
