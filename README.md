@@ -64,7 +64,16 @@ Exemplo:
  
  - Testado os modelos: Random Forest, KNN, Logistic Regression, Support Vector Machines, XGBoost. Métricas: acurácia, precisão macro, revocação macro, f1 macro e AUC.
  
- # [Entrega do Modelo](https://github.com/rafaelpavan95/americanas_teste/blob/master/entrega_do_modelo.ipynb)
+| Modelos     | Acurácia      | Precisão Macro | Recall Macro | F1 Macro | AUC |   
+| ------------- | ------------- | --------    | --------    | --------    | --------    |
+| KNN	| 0.614286 |	0.615196 |	0.615479 |	0.614207 |	0.615479 |
+| Logistic Regression |	0.628571 | 0.694784 |	0.643735	| 0.608096 |	0.643735 |
+| Support Vector Machines |	0.585714	| 0.660714 |	0.603194 |	0.552765	| 0.603194 |
+| **Random Forest** |	**0.657143** |	**0.757576** |	**0.674038**	| **0.632867**	| **0.674038** |
+| XGBoost |	0.585714 | 0.620000	| 0.598280	| 0.570915	| 0.598280 |
+| Dummy	| 0.457143	| 0.453267	| 0.453726	| 0.453125	| 0.453726 |
+
+# [Entrega do Modelo](https://github.com/rafaelpavan95/americanas_teste/blob/master/entrega_do_modelo.ipynb)
  
  - O modelo pode ser consumido tanto localmente, quanto remotamente (via Rest API). A [API](https://github.com/rafaelpavan95/americanas_teste/blob/master/main.py) foi desenvolvida com fastAPI.
  - O deploy foi feito em: https://rafaelpavan-americanas.herokuapp.com/predicao_americanas
